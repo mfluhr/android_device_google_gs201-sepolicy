@@ -29,7 +29,8 @@ genfscon sysfs /devices/soc0/revision                                          u
 
 # Touch
 genfscon sysfs /devices/platform/10d10000.spi/spi_master/spi0/spi0.0/synaptics_tcm.0/sysfs   u:object_r:sysfs_touch:s0
-genfscon sysfs /devices/virtual/sec/tsp                                                      u:object_r:sysfs_touch:s0
+genfscon sysfs /devices/virtual/sec/tsp                                        u:object_r:sysfs_touch:s0
+genfscon proc  /focaltech_touch                                                u:object_r:proc_touch:s0
 
 # tracefs
 genfscon tracefs /events/dmabuf_heap/dma_heap_stat                             u:object_r:debugfs_tracing:s0
@@ -90,30 +91,31 @@ genfscon sysfs /devices/platform/17000080.devfreq_bo/devfreq/17000080.devfreq_bo
 genfscon sysfs /devices/platform/14700000.ufs/pixel/boot_lun_enabled           u:object_r:sysfs_ota:s0
 
 # Display
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/gamma                              u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/min_vrefresh                       u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/idle_delay_ms                      u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_idle                         u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_need_handle_idle_exit        u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/hs_clock                                              u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c240000.drmdecon/early_wakeup                                         u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c242000.drmdecon/early_wakeup                                         u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/gamma                                u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/min_vrefresh                         u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/idle_delay_ms                        u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_idle                           u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_need_handle_idle_exit          u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/hs_clock                                                u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c240000.drmdecon/early_wakeup                                           u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c242000.drmdecon/early_wakeup                                           u:object_r:sysfs_display:s0
 
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/backlight                          u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_name                         u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/serial_number                      u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/backlight                            u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/panel_name                           u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/serial_number                        u:object_r:sysfs_display:s0
 
-genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/backlight                          u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/panel_name                         u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/serial_number                      u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/backlight                            u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/panel_name                           u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c2d0000.drmdsim/1c2d0000.drmdsim.0/serial_number                        u:object_r:sysfs_display:s0
 
-genfscon sysfs /devices/platform/1c240000.drmdecon/dqe0/atc                                             u:object_r:sysfs_display:s0
-genfscon sysfs /devices/platform/1c241000.drmdecon/dqe1/atc                                             u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c240000.drmdecon/dqe0/atc                                               u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/1c241000.drmdecon/dqe1/atc                                               u:object_r:sysfs_display:s0
 
-genfscon sysfs /module/drm/parameters/vblankoffdelay                                                    u:object_r:sysfs_display:s0
+genfscon sysfs /module/drm/parameters/vblankoffdelay                                                      u:object_r:sysfs_display:s0
 
-genfscon sysfs /devices/platform/exynos-drm/tui_status                                                  u:object_r:sysfs_display:s0
+genfscon sysfs /devices/platform/exynos-drm/tui_status                                                    u:object_r:sysfs_display:s0
 
+genfscon sysfs /devices/platform/1c2c0000.drmdsim/1c2c0000.drmdsim.0/backlight/panel0-backlight/als_table u:object_r:sysfs_write_leds:s0
 
 # mediacodec_samsung
 genfscon sysfs /devices/platform/mfc/video4linux/video                         u:object_r:sysfs_mfc:s0
@@ -148,6 +150,7 @@ genfscon debugfs /google_charger                                        u:object
 genfscon debugfs /gvotables                                             u:object_r:vendor_votable_debugfs:s0
 genfscon debugfs /google_battery                                        u:object_r:vendor_battery_debugfs:s0
 genfscon debugfs /dri/0/crtc-                                           u:object_r:vendor_dri_debugfs:s0
+genfscon debugfs /page_pinner                                           u:object_r:vendor_page_pinner_debugfs:s0
 
 # Battery
 genfscon sysfs /devices/platform/google,battery/power_supply/battery            u:object_r:sysfs_batteryinfo:s0
@@ -220,3 +223,17 @@ genfscon sysfs /devices/platform/17000060.devfreq_tnr/devfreq/17000060.devfreq_t
 genfscon sysfs /devices/platform/google,usbc_port_cooling_dev/cleared_time      u:object_r:sysfs_usbc_throttling_stats:s0
 genfscon sysfs /devices/platform/google,usbc_port_cooling_dev/hysteresis_time   u:object_r:sysfs_usbc_throttling_stats:s0
 genfscon sysfs /devices/platform/google,usbc_port_cooling_dev/trip_time         u:object_r:sysfs_usbc_throttling_stats:s0
+
+# SJTAG
+genfscon sysfs /devices/platform/sjtag_ap/interface                       u:object_r:sysfs_sjtag:s0
+genfscon sysfs /devices/platform/sjtag_gsa/interface                      u:object_r:sysfs_sjtag:s0
+
+# Coresight ETM
+genfscon sysfs /devices/platform/2b840000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2b940000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2ba40000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2bb40000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2bc40000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2bd40000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2be40000.etm    u:object_r:sysfs_devices_cs_etm:s0
+genfscon sysfs /devices/platform/2bf40000.etm    u:object_r:sysfs_devices_cs_etm:s0
