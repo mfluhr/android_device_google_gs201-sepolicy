@@ -204,6 +204,7 @@
 /data/vendor/sensors/registry(/.*)?                                         u:object_r:sensor_reg_data_file:s0
 /data/vendor/uwb(/.*)?                                                      u:object_r:uwb_data_vendor:s0
 /dev/battery_history                                                        u:object_r:battery_history_device:s0
+/data/vendor/powerstats(/.*)?                                               u:object_r:powerstats_vendor_data_file:s0
 
 # Persist
 /mnt/vendor/persist/battery(/.*)?                                           u:object_r:persist_battery_file:s0
@@ -220,9 +221,5 @@
 /mnt/vendor/efs_backup(/.*)?                                                u:object_r:modem_efs_file:s0
 /mnt/vendor/modem_userdata(/.*)?                                            u:object_r:modem_userdata_file:s0
 
-# USB
-/vendor/bin/hw/set_usb_irq\.sh  u:object_r:set-usb-irq-sh_exec:s0
-
 # Raw HID device
 /dev/hidraw[0-9]*                        u:object_r:hidraw_device:s0
-
