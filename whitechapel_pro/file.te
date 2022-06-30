@@ -14,6 +14,7 @@ type sensor_reg_data_file, file_type, data_file_type;
 type per_boot_file, file_type, data_file_type, core_data_file_type;
 type uwb_vendor_data_file, file_type, data_file_type, app_data_file_type;
 type uwb_data_vendor, file_type, data_file_type;
+type powerstats_vendor_data_file, file_type, data_file_type;
 userdebug_or_eng(`
   typeattribute tcpdump_vendor_data_file mlstrustedobject;
   typeattribute vendor_slog_file mlstrustedobject;
@@ -45,6 +46,7 @@ type sysfs_cpu, sysfs_type, fs_type;
 type sysfs_odpm, sysfs_type, fs_type;
 type sysfs_soc, sysfs_type, fs_type;
 type sysfs_camera, sysfs_type, fs_type;
+type sysfs_write_leds, sysfs_type, fs_type;
 
 # debugfs
 type debugfs_f2fs, debugfs_type, fs_type;
@@ -57,6 +59,7 @@ type vendor_votable_debugfs, fs_type, debugfs_type;
 type vendor_battery_debugfs, fs_type, debugfs_type;
 type vendor_dmabuf_debugfs, fs_type, debugfs_type;
 type vendor_dri_debugfs, fs_type, debugfs_type;
+type vendor_page_pinner_debugfs, fs_type, debugfs_type;
 
 # vendor extra images
 type modem_img_file, contextmount_type, file_type, vendor_file_type;
@@ -89,5 +92,19 @@ type modem_userdata_file, file_type;
 # SecureElement
 type sysfs_st33spi, sysfs_type, fs_type;
 
-# GPU
-type sysfs_gpu, sysfs_type, fs_type;
+# USB-C throttling stats
+type sysfs_usbc_throttling_stats, sysfs_type, fs_type;
+
+# Touch
+type proc_touch, proc_type, fs_type;
+
+# Vendor sched files
+userdebug_or_eng(`
+    typeattribute proc_vendor_sched mlstrustedobject;
+')
+
+# SJTAG
+type sysfs_sjtag, fs_type, sysfs_type;
+userdebug_or_eng(`
+    typeattribute sysfs_sjtag mlstrustedobject;
+')
