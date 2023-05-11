@@ -177,6 +177,9 @@ genfscon sysfs /devices/platform/14700000.ufs/health_descriptor         u:object
 genfscon sysfs /devices/platform/14700000.ufs/host0/target0:0:0/0:0:0:  u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/platform/14700000.ufs/ufs_stats                 u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/platform/14700000.ufs/attributes/wb_avail_buf   u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/14700000.ufs/vendor                    u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/14700000.ufs/model                     u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/14700000.ufs/rev                       u:object_r:sysfs_scsi_devices_0000:s0
 
 # debugfs
 genfscon debugfs /maxfg                                                 u:object_r:vendor_maxfg_debugfs:s0
@@ -188,7 +191,6 @@ genfscon debugfs /max77759_chg                                          u:object
 genfscon debugfs /max77729_pmic                                         u:object_r:vendor_charger_debugfs:s0
 genfscon debugfs /gvotables                                             u:object_r:vendor_votable_debugfs:s0
 genfscon debugfs /google_battery                                        u:object_r:vendor_battery_debugfs:s0
-genfscon debugfs /cma                                                   u:object_r:vendor_cma_debugfs:s0
 
 # Battery
 genfscon sysfs /devices/platform/google,battery/power_supply/battery            u:object_r:sysfs_batteryinfo:s0
