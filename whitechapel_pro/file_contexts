@@ -24,7 +24,6 @@
 /vendor/bin/hw/android\.hardware\.contexthub-service\.generic               u:object_r:hal_contexthub_default_exec:s0
 /vendor/bin/hw/android\.hardware\.boot@1\.2-service-gs201                   u:object_r:hal_bootctl_default_exec:s0
 /vendor/bin/hw/android\.hardware\.composer\.hwc3-service\.pixel             u:object_r:hal_graphics_composer_default_exec:s0
-/vendor/bin/hw/android\.hardware\.dumpstate-service\.gs201             u:object_r:hal_dumpstate_default_exec:s0
 /vendor/bin/hw/samsung\.hardware\.media\.c2@1\.0-service                    u:object_r:mediacodec_samsung_exec:s0
 /vendor/bin/hw/google\.hardware\.media\.c2@1\.0-service                     u:object_r:mediacodec_google_exec:s0
 /vendor/bin/hw/android\.hardware\.secure_element@1\.2-service-gto           u:object_r:hal_secure_element_st54spi_exec:s0
@@ -44,6 +43,8 @@
 /vendor/bin/hw/android\.hardware\.memtrack-service\.pixel                   u:object_r:hal_memtrack_default_exec:s0
 /system_ext/bin/convert_to_ext4\.sh                                         u:object_r:convert-to-ext4-sh_exec:s0
 /vendor/bin/hw/disable_contaminant_detection\.sh                            u:object_r:disable-contaminant-detection-sh_exec:s0
+/vendor/bin/dump/dump_power_gs201\.sh                                       u:object_r:dump_power_gs201_exec:s0
+/vendor/bin/ufs_firmware_update\.sh                                         u:object_r:ufs_firmware_update_exec:s0
 
 # Vendor Firmwares
 /vendor/firmware(/.*)?                                                      u:object_r:vendor_fw_file:s0
@@ -190,20 +191,17 @@
 /dev/block/platform/14700000\.ufs/by-name/vbmeta_vendor_[ab]                u:object_r:custom_ab_block_device:s0
 /dev/block/platform/14700000\.ufs/by-name/vendor_boot_[ab]                  u:object_r:custom_ab_block_device:s0
 /dev/block/platform/14700000\.ufs/by-name/vendor_kernel_boot_[ab]           u:object_r:custom_ab_block_device:s0
+/dev/block/platform/14700000\.ufs/by-name/fips                              u:object_r:fips_block_device:s0
 
 # Data
 /data/vendor/slog(/.*)?                                                     u:object_r:vendor_slog_file:s0
-/data/vendor/radio(/.*)?                                                    u:object_r:radio_vendor_data_file:s0
 /data/vendor/modem_stat(/.*)?                                               u:object_r:modem_stat_data_file:s0
 /data/vendor/log(/.*)?                                                      u:object_r:vendor_log_file:s0
-/data/vendor/log/hwc(/.*)?                                                  u:object_r:vendor_hwc_log_file:s0
 /data/vendor/log/rfsd(/.*)?                                                 u:object_r:vendor_rfsd_log_file:s0
 /data/vendor/rild(/.*)?                                                     u:object_r:rild_vendor_data_file:s0
 /data/vendor/ss(/.*)?                                                       u:object_r:tee_data_file:s0
 /data/nfc(/.*)?                                                             u:object_r:nfc_data_file:s0
 /data/vendor/firmware/wifi(/.*)?                                            u:object_r:updated_wifi_firmware_data_file:s0
-/data/vendor/tcpdump_logger(/.*)?                                           u:object_r:tcpdump_vendor_data_file:s0
-/data/vendor/camera(/.*)?                                                   u:object_r:vendor_camera_data_file:s0
 /data/vendor/media(/.*)?                                                    u:object_r:vendor_media_data_file:s0
 /data/vendor/misc(/.*)?                                                     u:object_r:vendor_misc_data_file:s0
 /data/per_boot(/.*)?                                                        u:object_r:per_boot_file:s0
