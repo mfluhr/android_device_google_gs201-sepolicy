@@ -1,4 +1,5 @@
 # Samsung S.LSI IMS
+user=_app isPrivApp=true name=.ShannonImsService domain=vendor_ims_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.imsservice domain=vendor_ims_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.imsservice:remote domain=vendor_ims_remote_app levelFrom=all
 user=_app isPrivApp=true name=com.shannon.qualifiednetworksservice domain=vendor_qualifiednetworks_app levelFrom=all
@@ -16,9 +17,6 @@ user=system seinfo=platform name=com.samsung.slsi.telephony.networktestmode doma
 
 # Samsung S.LSI engineer mode
 user=_app seinfo=platform name=com.samsung.slsi.engineermode domain=vendor_engineermode_app levelFrom=all
-
-# Hardware Info Collection
-user=_app isPrivApp=true name=com.google.android.hardwareinfo domain=hardware_info_app type=app_data_file levelFrom=user
 
 # coredump/ramdump
 user=_app seinfo=platform name=com.android.ramdump domain=ramdump_app type=app_data_file levelFrom=all
@@ -56,6 +54,15 @@ user=system seinfo=platform name=com.google.SSRestartDetector domain=ssr_detecto
 
 # Google Camera
 user=_app isPrivApp=true seinfo=google name=com.google.android.GoogleCamera domain=google_camera_app type=app_data_file levelFrom=all
+
+# Google Camera Eng
+user=_app seinfo=CameraEng name=com.google.android.GoogleCameraEng domain=debug_camera_app type=app_data_file levelFrom=all
+
+# Also allow GoogleCameraNext, the fishfood version, the same access as GoogleCamera
+user=_app seinfo=CameraFishfood name=com.google.android.apps.googlecamera.fishfood domain=google_camera_app type=app_data_file levelFrom=all
+
+# Also label GoogleCameraNext, built with debug keys as debug_camera_app.
+user=_app seinfo=CameraEng name=com.google.android.apps.googlecamera.fishfood domain=debug_camera_app type=app_data_file levelFrom=all
 
 # Domain for CatEngineService
 user=system seinfo=platform name=com.google.android.CatEngine domain=cat_engine_service_app type=system_app_data_file levelFrom=all
