@@ -2,7 +2,10 @@ dump_display sysfs file b/350831939
 dump_modem sscoredump_vendor_data_coredump_file dir b/361726277
 dump_modem sscoredump_vendor_data_logcat_file dir b/361726277
 dumpstate unlabeled file b/350832009
+hal_camera_default cgroup_desc_file file b/372360090
 hal_face_default traced_producer_socket sock_file b/305600808
+hal_graphics_composer_default cgroup_desc_file file b/372359823
+hal_power_default cgroup_desc_file file b/372360278
 hal_power_default hal_power_default capability b/237492146
 hal_sensors_default sysfs file b/336451433
 hal_vibrator_default default_android_service service_manager b/360057889
