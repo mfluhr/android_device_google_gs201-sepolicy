@@ -1,3 +1,4 @@
+aconfigd apex_info_file file b/381326452
 bluetooth audio_config_prop file b/379245738
 dump_display sysfs file b/350831939
 dump_modem sscoredump_vendor_data_coredump_file dir b/361726277
